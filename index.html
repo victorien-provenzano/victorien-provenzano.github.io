@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        (function(h,o,u,n,d) {
+          h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+          d=o.createElement(u);d.async=1;d.src=n
+          n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+        })(window,document,'script','https://www.datadoghq-browser-agent.com/datadog-rum-v4.js','DD_RUM')
+        DD_RUM.onReady(function() {
+          DD_RUM.init({
+            clientToken: 'puba7bd83b4e4480f47cf427744d9aae8fc',
+            applicationId: '77e10eda-a2d6-4917-b3f5-587eb98762da',
+            site: 'datadoghq.com',
+            service: 'rum-sandbox',
+            env: 'prod',
+            // Specify a version number to identify the deployed version of your application in Datadog 
+            // version: '1.0.0',
+            sampleRate: 100,
+            premiumSampleRate: 100,
+            trackInteractions: true,
+            defaultPrivacyLevel: 'mask-user-input',
+          });
+      
+          DD_RUM.startSessionReplayRecording();
+        })
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
